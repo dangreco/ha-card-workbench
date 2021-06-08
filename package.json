@@ -30,7 +30,7 @@
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
     "react-json-tree": "^0.15.0",
-    "threedy": "../threedy2"
+    "threedy": "^2.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
