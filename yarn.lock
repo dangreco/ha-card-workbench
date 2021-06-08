@@ -10714,8 +10714,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-threedy@../threedy2:
+threedy@^2.0.0:
   version "2.0.0"
+  resolved "https://registry.yarnpkg.com/threedy/-/threedy-2.0.0.tgz#eb95a592b6e0606537c671a4b43f7070ab734ce6"
+  integrity sha512-1DmbtED/V0UjV2gaO7kGtirMQvxG9TzAQVNdQsd1rzV8/+wkE30/kZk7gRlNj72Y/r04coO7q+yjtkqztd6N/Q==
   dependencies:
     "@types/lodash" "^4.14.170"
     custom-card-helpers "^1.7.0"
