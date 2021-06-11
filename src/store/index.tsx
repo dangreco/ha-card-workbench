@@ -4,14 +4,8 @@ import { _Api, _Get, _Set, Config, HACWBStore, UpdateConfig, Workbench } from ".
 import { configDefaults, entitiesDefaults } from "../data/defaults";
 
 
-const updateCard = (config: UpdateConfig) => (set: _Set, get: _Get, api: _Api) => config((args: HACWBStore)  => {
-  console.log("  applying", args)
-  set(args)
-  console.log("  new state", get())
-}, get, api)
 
 export const useWorkbench = create<HACWBStore>(
-  updateCard(
     persist<HACWBStore>(
       (set, get) => ({
         workbench: {
@@ -31,7 +25,6 @@ export const useWorkbench = create<HACWBStore>(
         name: 'workbench-store'
       }
     )
-  )
 )
 
 

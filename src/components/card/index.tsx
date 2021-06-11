@@ -48,7 +48,6 @@ const Card = () => {
   }, [workbench]);
 
   useEffect(() => {
-    console.log("UPDATING CARD")
     updateCard();
   }, [entities, config])
 
