@@ -71,7 +71,9 @@ $ yarn dev
 
 See the [open issues](https://github.com/dangreco/ha-card-workbench/issues) for a list of proposed features (and known issues).
 
-- [ ] 
+
+- [ ] Allow emulation/usage of Home Assistant events & services
+- [ ] Implement native Lovelace Cards
 
 
 <!-- CONTRIBUTING -->
@@ -91,9 +93,5 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-- [ ] Allow emulation/usage of Home Assistant events & services
-- [ ] Implement native Lovelace Cards
-
 
 
