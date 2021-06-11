@@ -1,54 +1,6 @@
-export const entitiesDefaults = {
-  "sensor.ender_3_v2_current_state": {
-    state: "Printing",
-  },
-  "sensor.ender_3_v2_job_percentage": {
-    state: 52.12,
-  },
-  "sensor.ender_3_v2_actual_tool0_temp": {
-    state: 214.7,
-    attributes: {
-      unit_of_measurement: "°C",
-    },
-  },
-  "sensor.ender_3_v2_actual_bed_temp": {
-    state: 65.1,
-    attributes: {
-      unit_of_measurement: "°C",
-    },
-  },
-  "sensor.ender_3_v2_time_elapsed": {
-    state: 37,
-  },
-  "sensor.ender_3_v2_time_remaining": {
-    state: 65,
-  },
-  "switch.ender": {},
-  "switch.light": {
-    state: "on",
-  },
-  "camera.test": {
-    attributes: {
-      access_token: "ff",
-    },
-    test: true,
-    testUrl: "http://69.51.252.162:8081/?action=stream",
-  },
-};
+export const entitiesDefaults = `{}`
 
-export const configDefaults = `type: 'custom:threedy-card'
-base_entity: sensor.ender_3_v2
-name: Ender 3 v2
-temperature_unit: C
-printer_type: I3
-exact_time: true
-monitored:
-  - ETA
-  - Hotend
-  - Bed
-  - Elapsed
-  - Remaining
-`;
+export const configDefaults = `type: 'custom:your-card-name'`;
 
 export const jsonTreeTheme = {
   scheme: "Material Darker",

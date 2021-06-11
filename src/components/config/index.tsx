@@ -1,17 +1,21 @@
 import { Card, Text, Divider, Spacer } from "@geist-ui/react";
 import CodeMirror, { Editor } from "@uiw/react-codemirror";
-import { configDefaults } from "../../data/defaults";
 import yaml from "js-yaml";
+import { Config } from "../../types";
+import { useWorkbench } from "../../store";
+import { debounce } from "home-assistant-js-websocket/dist/util";
+import { useEffect, useState } from "preact/hooks";
 
-const Config = () => {
-  const _updateConfig = (editor: Editor) => {
+const ConfigEditor = () => {
+
+  const { config, updateConfig } = useWorkbench();
+  const [localConfig, setLocalConfig] = useState('');
+
+  const configChanged = (editor: Editor) => {
     try {
       const config = editor.getValue();
-      const configObj = yaml.load(config);
-      const threedies = document.getElementsByTagName("threedy-card");
-      if (threedies.length === 0) return;
-      // @ts-ignore
-      threedies[0].setConfig(configObj);
+      setLocalConfig(config);
+      yaml.load(config);
     } catch (e) {
       if (
         e.reason ===
@@ -22,19 +26,29 @@ const Config = () => {
     }
   };
 
+  const update = debounce(updateConfig, 100);
+
+  useEffect(() => {
+    update(localConfig);
+  }, [localConfig])
+
+  useEffect(() => {
+    setLocalConfig(config);
+  }, [])
+
   return (
     <Card style={{ height: "100%" }}>
       <Text h3>Configuration</Text>
       <CodeMirror
-        value={configDefaults}
-        onChange={_updateConfig}
+        value={localConfig}
+        onChange={configChanged}
         options={{
           mode: "yaml",
-          theme: "material-darker",
+          theme: "material-darker"
         }}
       />
     </Card>
   );
 };
 
-export default Config;
+export default ConfigEditor;
