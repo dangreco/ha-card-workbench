@@ -66,6 +66,35 @@ $ yarn dev
 ```
 
 
+## Features/Usage
+
+### Entities Editor/Viewer
+![Entities Editor](https://raw.githubusercontent.com/dangreco/ha-card-workbench/master/screenshots/entitiesEditor.png)
+
+#### Entities
+This editor is for modifying/viewing entity states. Disconnected from HASS, you can write and read mock values.
+If you are connected to HASS, the view will change to a JSON tree in read-only mode. (If you want to modify your HASS values, simply disconnect from HASS, and the workbench will remember all the entity states.)
+
+#### Connection
+In the top right corner there is a button to enable a connection to your HASS server for real-time entity access.
+
+### Card Config Editor
+![Config Editor](https://raw.githubusercontent.com/dangreco/ha-card-workbench/master/screenshots/configEditor.png)
+
+This editing window lets you edit your card's configuration in the same way that you would normally.
+
+
+### Workbench Config
+![Workbench Config](https://raw.githubusercontent.com/dangreco/ha-card-workbench/master/screenshots/workbenchConfig.png)
+
+This panel allows you to set the location of your card's JS file. If you are on the online workbench and this is not working,
+please see above on disabling site protection.
+
+There are two "Name" inputs: one for the card's element name (e.g. `threedy-card`) and the other for the configuration
+carc's element name (e.g. `threedy-config-card`). 
+
+
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -74,12 +103,13 @@ See the [open issues](https://github.com/dangreco/ha-card-workbench/issues) for 
 
 - [ ] Allow emulation/usage of Home Assistant events & services
 - [ ] Implement native Lovelace Cards
+- [ ] Visual/Code config editor switch
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
