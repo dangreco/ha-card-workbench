@@ -1,6 +1,6 @@
 {
-  "name": "editor",
-  "short_name": "editor",
+  "name": "Home Assistant Card Workbench",
+  "short_name": "HA Card Workbench",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
