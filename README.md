@@ -23,6 +23,9 @@
 
 I couldn't find a nice way of playing around with state values while being able to live refresh the card
 while working on custom Home Assistant cards. This workbench is a solution to both of those problems.
+
+### If you like this project, consider buying me a coffee!
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/dangreco)
 ### Built With
 
 * [Preact](https://preactjs.com/)
